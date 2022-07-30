@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_270sdp"
+    android:layout_height="@dimen/_90sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="@dimen/_10sdp"
+    android:layout_margin="@dimen/_3sdp"
+    app:cardElevation="@dimen/_3sdp"
+
+    >
+
+    <ImageView
+        android:id="@+id/img_egyption"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:background="@color/teal_700"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#23000000"
+       />
+    <TextView
+    android:id="@+id/text_name"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text=""
+    android:textColor="@color/white"
+    android:fontFamily="@font/myfont"
+
+
+    />
+
+
+
+</androidx.cardview.widget.CardView>

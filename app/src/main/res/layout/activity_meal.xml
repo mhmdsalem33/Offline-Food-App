@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activites.MealActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_180sdp"
+        android:id="@+id/appbar"
+        >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:title="Meal Name"
+            app:layout_scrollFlags="exitUntilCollapsed|snap|scroll"
+            app:collapsedTitleTextColor="@color/white"
+            app:contentScrim="@color/teal_700"
+            app:expandedTitleTextColor="@color/white"
+            >
+
+            <ImageView
+                android:id="@+id/img_meal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+
+                />
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                />
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linear_meal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+
+                >
+                <TextView
+                    android:id="@+id/categoryName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Category:"
+                    android:drawableLeft="@drawable/ic_baseline_category_24"
+                    android:drawableTint="@color/teal_700"
+                    android:drawablePadding="@dimen/_2sdp"
+                    android:textSize="@dimen/_11ssp"
+                    android:textColor="@color/teal_700"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+
+
+                    />
+                <TextView
+                    android:id="@+id/locationName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Location :"
+                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                    android:drawableTint="@color/teal_700"
+                    android:drawablePadding="@dimen/_2sdp"
+                    android:textSize="@dimen/_11ssp"
+                    android:textColor="@color/teal_700"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+
+
+                    />
+
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/text_insturaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-Instructions"
+                app:layout_constraintTop_toBottomOf="@+id/linear_meal"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textStyle="bold"
+                android:textColor="@color/teal_700"
+                android:textSize="@dimen/_15ssp"
+
+                />
+            <TextView
+                android:id="@+id/text_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_insturaction"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textStyle="bold"
+                android:textColor="@color/teal_700"
+                android:textSize="@dimen/_10ssp"
+                android:layout_marginEnd="@dimen/_10sdp"
+
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <ImageView
+        android:id="@+id/img_youtube"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_ondemand_video_24"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:tint="@color/teal_700"
+        android:layout_gravity="bottom|center"
+
+        />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
